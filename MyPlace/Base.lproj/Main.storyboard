@@ -11,18 +11,64 @@
         <scene sceneID="2zE-aS-OmG">
             <objects>
                 <tableViewController id="p11-bf-dc2" customClass="MainTableViewController" customModule="MyPlace" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="83R-av-ovA">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="85" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="83R-av-ovA">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="wGn-aK-dem">
-                                <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="wGn-aK-dem" customClass="CustomTableViewCell" customModule="MyPlace" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="414" height="85"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="wGn-aK-dem" id="sQe-of-irj">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="85"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="pur-Ch-Lbf">
+                                            <rect key="frame" x="15" y="10" width="65" height="65"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="65" id="UGH-AQ-Zox"/>
+                                                <constraint firstAttribute="height" constant="65" id="cGr-5G-T6P"/>
+                                            </constraints>
+                                        </imageView>
+                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="1kx-yH-g9O">
+                                            <rect key="frame" x="95" y="10" width="298" height="65"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aHz-E3-cyV">
+                                                    <rect key="frame" x="0.0" y="0.0" width="298" height="23"/>
+                                                    <fontDescription key="fontDescription" name="Kailasa" family="Kailasa" pointSize="18"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Location" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dfU-n7-grD">
+                                                    <rect key="frame" x="0.0" y="26" width="298" height="19.5"/>
+                                                    <fontDescription key="fontDescription" name="Kailasa" family="Kailasa" pointSize="15"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Type" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="piF-IW-d1k">
+                                                    <rect key="frame" x="0.0" y="48.5" width="298" height="16.5"/>
+                                                    <fontDescription key="fontDescription" name="Kailasa" family="Kailasa" pointSize="13"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </stackView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="1kx-yH-g9O" firstAttribute="bottom" secondItem="pur-Ch-Lbf" secondAttribute="bottom" id="2FQ-tQ-Nsd"/>
+                                        <constraint firstAttribute="trailing" secondItem="1kx-yH-g9O" secondAttribute="trailing" constant="21" id="3wk-6G-qGv"/>
+                                        <constraint firstItem="pur-Ch-Lbf" firstAttribute="centerY" secondItem="sQe-of-irj" secondAttribute="centerY" id="65y-51-UOt"/>
+                                        <constraint firstItem="1kx-yH-g9O" firstAttribute="leading" secondItem="pur-Ch-Lbf" secondAttribute="trailing" constant="15" id="IWo-iB-tcU"/>
+                                        <constraint firstItem="1kx-yH-g9O" firstAttribute="centerY" secondItem="pur-Ch-Lbf" secondAttribute="centerY" id="ZEu-xq-prG"/>
+                                        <constraint firstItem="pur-Ch-Lbf" firstAttribute="leading" secondItem="sQe-of-irj" secondAttribute="leading" constant="15" id="evF-aE-2fA"/>
+                                    </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="imageOfPlace" destination="pur-Ch-Lbf" id="g5s-o1-mrj"/>
+                                    <outlet property="locationLabel" destination="dfU-n7-grD" id="JLZ-0U-bSo"/>
+                                    <outlet property="nameLabel" destination="aHz-E3-cyV" id="xYZ-Qo-dI7"/>
+                                    <outlet property="typeLabel" destination="piF-IW-d1k" id="ssi-ld-4yL"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
