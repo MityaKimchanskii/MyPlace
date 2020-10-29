@@ -11,7 +11,7 @@
         <scene sceneID="2zE-aS-OmG">
             <objects>
                 <tableViewController id="p11-bf-dc2" customClass="MainTableViewController" customModule="MyPlace" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="85" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="83R-av-ovA">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="85" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="83R-av-ovA">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -246,15 +246,22 @@
                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="0YW-dN-RHu">
                             <color key="tintColor" systemColor="systemRedColor"/>
                             <connections>
-                                <segue destination="bq2-Q5-62v" kind="unwind" unwindAction="cancelAction:" id="OTi-fl-cOi"/>
+                                <action selector="cancelAction:" destination="DOc-hw-hpR" id="IEe-TQ-0BF"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="save" id="3RI-Kl-ZWT">
                             <color key="tintColor" red="0.031372549020000001" green="0.090196078430000007" blue="0.2784313725" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <connections>
+                                <segue destination="bq2-Q5-62v" kind="unwind" unwindAction="unwindSegue:" id="mgj-7K-E2r"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="imageOfPlace" destination="q4O-MW-RMj" id="TCK-dV-Sf7"/>
+                        <outlet property="placeImage" destination="q4O-MW-RMj" id="TCK-dV-Sf7"/>
+                        <outlet property="placeLocation" destination="XdZ-HU-tqR" id="b6U-Js-GRF"/>
+                        <outlet property="placeName" destination="n3U-Io-Gk5" id="sVa-ui-pIY"/>
+                        <outlet property="placeType" destination="43K-1I-oN2" id="0oI-HF-qSR"/>
+                        <outlet property="saveButton" destination="3RI-Kl-ZWT" id="f40-F4-IeR"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W94-HF-5dw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
