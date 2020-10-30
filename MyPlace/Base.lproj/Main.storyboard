@@ -11,7 +11,7 @@
         <scene sceneID="2zE-aS-OmG">
             <objects>
                 <tableViewController id="p11-bf-dc2" customClass="MainTableViewController" customModule="MyPlace" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="85" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="83R-av-ovA">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="85" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="83R-av-ovA">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -68,6 +68,7 @@
                                     <outlet property="locationLabel" destination="dfU-n7-grD" id="JLZ-0U-bSo"/>
                                     <outlet property="nameLabel" destination="aHz-E3-cyV" id="xYZ-Qo-dI7"/>
                                     <outlet property="typeLabel" destination="piF-IW-d1k" id="ssi-ld-4yL"/>
+                                    <segue destination="DOc-hw-hpR" kind="show" identifier="showDetail" id="8eb-42-Z6j"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -76,7 +77,7 @@
                             <outlet property="delegate" destination="p11-bf-dc2" id="nre-MV-8Ip"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="My Places" id="Pdo-w0-iqi">
+                    <navigationItem key="navigationItem" title="My Places" largeTitleDisplayMode="never" id="Pdo-w0-iqi">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="32u-Fe-mNJ">
                             <connections>
                                 <segue destination="VrT-6e-4YN" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="flipHorizontal" id="4Ti-VZ-rmK"/>
@@ -86,7 +87,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="c02-hR-hCA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="815.94202898550736" y="7.3660714285714279"/>
+            <point key="canvasLocation" x="638" y="7"/>
         </scene>
         <!--New Place-->
         <scene sceneID="9UB-gp-Gjx">
@@ -131,9 +132,9 @@
                                                     <rect key="frame" x="20" y="2" width="374" height="71"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4gS-ck-rkh">
-                                                            <rect key="frame" x="0.0" y="0.0" width="52.5" height="34.5"/>
-                                                            <fontDescription key="fontDescription" name="Kefa-Regular" family="Kefa" pointSize="20"/>
-                                                            <color key="textColor" red="0.031372549020000001" green="0.090196078430000007" blue="0.2784313725" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="39.5" height="34.5"/>
+                                                            <fontDescription key="fontDescription" name="Kefa-Regular" family="Kefa" pointSize="15"/>
+                                                            <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="bottom" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="n3U-Io-Gk5">
@@ -169,9 +170,9 @@
                                                     <rect key="frame" x="20" y="2" width="374" height="71"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Location" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YUP-ZR-dip">
-                                                            <rect key="frame" x="0.0" y="0.0" width="77" height="34.5"/>
-                                                            <fontDescription key="fontDescription" name="Kefa-Regular" family="Kefa" pointSize="20"/>
-                                                            <color key="textColor" red="0.031372549020000001" green="0.090196078430000007" blue="0.2784313725" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="57.5" height="34.5"/>
+                                                            <fontDescription key="fontDescription" name="Kefa-Regular" family="Kefa" pointSize="15"/>
+                                                            <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="bottom" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XdZ-HU-tqR">
@@ -207,9 +208,9 @@
                                                     <rect key="frame" x="20" y="2" width="374" height="71"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Type" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7ab-7d-8Ft">
-                                                            <rect key="frame" x="0.0" y="0.0" width="42" height="34.5"/>
-                                                            <fontDescription key="fontDescription" name="Kefa-Regular" family="Kefa" pointSize="20"/>
-                                                            <color key="textColor" red="0.031372549020000001" green="0.090196078430000007" blue="0.2784313725" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="31.5" height="34.5"/>
+                                                            <fontDescription key="fontDescription" name="Kefa-Regular" family="Kefa" pointSize="15"/>
+                                                            <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="bottom" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="43K-1I-oN2">
@@ -242,7 +243,7 @@
                             <outlet property="delegate" destination="DOc-hw-hpR" id="boz-Dg-5WE"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="New Place" id="i3e-FC-lI1">
+                    <navigationItem key="navigationItem" title="New Place" largeTitleDisplayMode="always" id="i3e-FC-lI1">
                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="0YW-dN-RHu">
                             <color key="tintColor" systemColor="systemRedColor"/>
                             <connections>
@@ -267,15 +268,15 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W94-HF-5dw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="bq2-Q5-62v" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="2356.521739130435" y="6.6964285714285712"/>
+            <point key="canvasLocation" x="1393" y="7"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="nYi-hz-tdX">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="2oP-ks-1at" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="sQ5-TF-rZu">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="sQ5-TF-rZu">
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <textAttributes key="titleTextAttributes">
                             <fontDescription key="fontDescription" name="Zapfino" family="Zapfino" pointSize="17"/>
@@ -312,9 +313,12 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9wY-9M-5e6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1559" y="7"/>
+            <point key="canvasLocation" x="1394" y="-646"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="X7N-Lx-bF4"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="Photo" width="195" height="196"/>
         <systemColor name="secondarySystemBackgroundColor">
