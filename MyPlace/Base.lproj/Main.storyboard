@@ -155,6 +155,23 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" rowHeight="140" id="pnj-Qh-46I">
+                                        <rect key="frame" x="0.0" y="503" width="414" height="140"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="pnj-Qh-46I" id="eHT-Pl-XE3">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="140"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="MP9-iv-bHT" customClass="RaitingControl" customModule="MyPlace" customModuleProvider="target">
+                                                    <rect key="frame" x="107" y="11" width="200" height="110"/>
+                                                </stackView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="MP9-iv-bHT" firstAttribute="centerY" secondItem="eHT-Pl-XE3" secondAttribute="centerY" id="Fng-t9-vqf"/>
+                                                <constraint firstItem="MP9-iv-bHT" firstAttribute="centerX" secondItem="eHT-Pl-XE3" secondAttribute="centerX" id="yK0-lh-ICB"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
                                 </cells>
                             </tableViewSection>
                         </sections>
@@ -264,7 +281,7 @@
                                 </connections>
                             </tableView>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="b4V-zk-Vek">
-                                <rect key="frame" x="0.0" y="88" width="414" height="39"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="40"/>
                                 <segments>
                                     <segment title="Date"/>
                                     <segment title="Name"/>
@@ -280,7 +297,7 @@
                         <constraints>
                             <constraint firstItem="b4V-zk-Vek" firstAttribute="leading" secondItem="O7V-l1-SZJ" secondAttribute="leading" id="1eM-Ha-mzB"/>
                             <constraint firstItem="b4V-zk-Vek" firstAttribute="trailing" secondItem="O7V-l1-SZJ" secondAttribute="trailing" id="7rc-Ex-zQW"/>
-                            <constraint firstItem="LfT-nh-qBy" firstAttribute="top" secondItem="b4V-zk-Vek" secondAttribute="bottom" constant="1" id="ogL-Fs-4PX"/>
+                            <constraint firstItem="LfT-nh-qBy" firstAttribute="top" secondItem="b4V-zk-Vek" secondAttribute="bottom" id="ogL-Fs-4PX"/>
                             <constraint firstItem="b4V-zk-Vek" firstAttribute="top" secondItem="O7V-l1-SZJ" secondAttribute="top" id="xhC-I5-rvL"/>
                         </constraints>
                     </view>
