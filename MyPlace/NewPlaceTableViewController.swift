@@ -11,7 +11,7 @@ import RealmSwift
 class NewPlaceTableViewController: UITableViewController, UINavigationControllerDelegate {
     
 //    var newPlace = Place()
-    var  currentPlace: Place?
+    var  currentPlace: Place!
     var imageIsChanged = false
 
     @IBOutlet var saveButton: UIBarButtonItem!
@@ -19,12 +19,14 @@ class NewPlaceTableViewController: UITableViewController, UINavigationController
     @IBOutlet var placeName: UITextField!
     @IBOutlet var placeLocation: UITextField!
     @IBOutlet var placeType: UITextField!
+    @IBOutlet var ratingControl: RaitingControl!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 //        DispatchQueue.main.async {
 //            self.newPlace.savePlaces()
 //        }
+        tableView.tableFooterView = UIView(frame: CGRect(x: 0, y: 0, width: tableView.frame.size.width, height: 1))
         saveButton.isEnabled = false
         placeName.addTarget(self, action: #selector(textFieldChanged), for: .editingChanged)
         tableView.tableFooterView = UIView()
@@ -76,7 +78,7 @@ class NewPlaceTableViewController: UITableViewController, UINavigationController
             image = #imageLiteral(resourceName: "imagePlaceholder")
         }
         let imageData = image?.pngData()
-        let newPlace = Place(name: placeName.text!, location: placeLocation.text, type: placeType.text, imageData: imageData)
+        let newPlace = Place(name: placeName.text!, location: placeLocation.text, type: placeType.text, imageData: imageData, rating: Double(ratingControl.rating))
         
         if currentPlace != nil {
             try! realm.write {
@@ -84,6 +86,7 @@ class NewPlaceTableViewController: UITableViewController, UINavigationController
                 currentPlace?.location = newPlace.location
                 currentPlace?.type = newPlace.type
                 currentPlace?.imageData = newPlace.imageData
+                currentPlace?.rating = newPlace.rating
                 }
             } else {
                 StorageManager.saveObject(newPlace)
@@ -107,10 +110,10 @@ class NewPlaceTableViewController: UITableViewController, UINavigationController
             
             placeImage.image = image
             placeImage.contentMode = .scaleAspectFill
-            
             placeName.text = currentPlace?.name
             placeLocation.text = currentPlace?.location
             placeType.text = currentPlace?.type
+            ratingControl.rating = Int(currentPlace.rating)
         }
     }
     

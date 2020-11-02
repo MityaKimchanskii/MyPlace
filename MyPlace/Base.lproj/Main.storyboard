@@ -162,8 +162,8 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="140"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="MP9-iv-bHT" customClass="RaitingControl" customModule="MyPlace" customModuleProvider="target">
-                                                    <rect key="frame" x="107" y="11" width="200" height="110"/>
+                                                <stackView opaque="NO" contentMode="scaleToFill" placeholderIntrinsicWidth="252" placeholderIntrinsicHeight="44" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="MP9-iv-bHT" customClass="RaitingControl" customModule="MyPlace" customModuleProvider="target">
+                                                    <rect key="frame" x="81" y="48" width="252" height="44"/>
                                                 </stackView>
                                             </subviews>
                                             <constraints>
@@ -199,6 +199,7 @@
                         <outlet property="placeLocation" destination="XdZ-HU-tqR" id="b6U-Js-GRF"/>
                         <outlet property="placeName" destination="n3U-Io-Gk5" id="sVa-ui-pIY"/>
                         <outlet property="placeType" destination="43K-1I-oN2" id="0oI-HF-qSR"/>
+                        <outlet property="ratingControl" destination="MP9-iv-bHT" id="YUZ-bw-N9F"/>
                         <outlet property="saveButton" destination="3RI-Kl-ZWT" id="f40-F4-IeR"/>
                     </connections>
                 </tableViewController>
@@ -370,6 +371,11 @@
             <point key="canvasLocation" x="1529" y="-636"/>
         </scene>
     </scenes>
+    <designables>
+        <designable name="MP9-iv-bHT">
+            <size key="intrinsicContentSize" width="252" height="44"/>
+        </designable>
+    </designables>
     <inferredMetricsTieBreakers>
         <segue reference="EAf-RN-edW"/>
     </inferredMetricsTieBreakers>
