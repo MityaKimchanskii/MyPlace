@@ -7,12 +7,14 @@
 
 import UIKit
 import RealmSwift
+//import Cosmos
 
 class NewPlaceTableViewController: UITableViewController, UINavigationControllerDelegate {
     
 //    var newPlace = Place()
     var  currentPlace: Place!
     var imageIsChanged = false
+//    var currentRating = 0.0
 
     @IBOutlet var saveButton: UIBarButtonItem!
     @IBOutlet var placeImage: UIImageView!
@@ -20,6 +22,7 @@ class NewPlaceTableViewController: UITableViewController, UINavigationController
     @IBOutlet var placeLocation: UITextField!
     @IBOutlet var placeType: UITextField!
     @IBOutlet var ratingControl: RaitingControl!
+//    @IBOutlet var cosmosView: CosmosView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,6 +35,11 @@ class NewPlaceTableViewController: UITableViewController, UINavigationController
         tableView.tableFooterView = UIView()
         
         setupEditScreen()
+        
+//        cosmosView.settings.fillMode = .half
+//        cosmosView.didTouchCosmos = { rating in
+//            self.currentRating = rating
+//        }
     }
     
     
@@ -113,7 +121,7 @@ class NewPlaceTableViewController: UITableViewController, UINavigationController
             placeName.text = currentPlace?.name
             placeLocation.text = currentPlace?.location
             placeType.text = currentPlace?.type
-            ratingControl.rating = Int(currentPlace.rating)
+//            cosmosView.rating = currentPlace.rating
         }
     }
     
