@@ -257,6 +257,9 @@
                             <constraint firstAttribute="trailing" secondItem="JwB-XW-zYR" secondAttribute="trailing" id="fkW-jZ-khM"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="mapView" destination="JwB-XW-zYR" id="zQg-xW-KVZ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="P0F-ZC-04h" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
