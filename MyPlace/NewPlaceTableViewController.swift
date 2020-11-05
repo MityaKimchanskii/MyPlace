@@ -78,13 +78,23 @@ class NewPlaceTableViewController: UITableViewController, UINavigationController
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier != "showMap" { return }
         
-        let mapVC = segue.destination as! MapViewController
-        mapVC.place.name = placeName.text!
-        mapVC.place.location = placeLocation.text
-        mapVC.place.type = placeType.text
-        mapVC.place.imageData = placeImage.image?.pngData()
+        guard let identifier = segue.identifier, let mapVC = segue.destination as? MapViewController else { return }
+        
+//        if segue.identifier != "showMap" { return }
+        
+        mapVC.incamSegueIdentifier = identifier
+        mapVC.mapViewControllerDelegate = self
+        
+        if identifier == "showMap" {
+            
+            mapVC.place.name = placeName.text!
+            mapVC.place.location = placeLocation.text
+            mapVC.place.type = placeType.text
+            mapVC.place.imageData = placeImage.image?.pngData()
+        }
+//        let mapVC = segue.destination as! MapViewController
+        
     }
     
     func savePlace() {
@@ -192,6 +202,14 @@ extension NewPlaceTableViewController: UIImagePickerControllerDelegate {
         imageIsChanged = true
         
         dismiss(animated: true, completion: nil)
+    }
+    
+}
+
+extension NewPlaceTableViewController: MapViewControllerDelegate {
+    
+    func getAddress(_ address: String?) {
+        placeLocation.text = address
     }
     
 }
