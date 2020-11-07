@@ -295,6 +295,18 @@
                                     <action selector="doneButtonPressed:" destination="9f9-5s-yh0" eventType="touchUpInside" id="oAx-3L-aC4"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8sc-Fz-6xj">
+                                <rect key="frame" x="141.5" y="754" width="131" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="FBk-fl-ylX"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="131" id="eS9-2I-QwI"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                <state key="normal" title="Get Direction"/>
+                                <connections>
+                                    <action selector="goButtonPressed" destination="9f9-5s-yh0" eventType="touchUpInside" id="UHk-WD-8dc"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="sQT-y5-rE2"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -306,8 +318,10 @@
                             <constraint firstItem="sQT-y5-rE2" firstAttribute="bottom" secondItem="4uq-Db-wvh" secondAttribute="bottom" constant="788" id="C5t-aS-5v0"/>
                             <constraint firstItem="JwB-XW-zYR" firstAttribute="leading" secondItem="MIC-Wp-wre" secondAttribute="leading" id="CEv-k1-3db"/>
                             <constraint firstItem="sQT-y5-rE2" firstAttribute="trailing" secondItem="ouA-Ta-n1f" secondAttribute="trailing" id="JNU-0l-MLF"/>
+                            <constraint firstItem="8sc-Fz-6xj" firstAttribute="centerX" secondItem="MIC-Wp-wre" secondAttribute="centerX" id="Jbn-Tm-gfl"/>
                             <constraint firstItem="Kch-EC-PmR" firstAttribute="centerX" secondItem="MIC-Wp-wre" secondAttribute="centerX" id="K9d-Na-snm"/>
                             <constraint firstAttribute="bottom" secondItem="JwB-XW-zYR" secondAttribute="bottom" id="OxH-vO-IqC"/>
+                            <constraint firstItem="sQT-y5-rE2" firstAttribute="bottom" secondItem="8sc-Fz-6xj" secondAttribute="bottom" constant="64" id="Vqn-XU-ECP"/>
                             <constraint firstItem="sQT-y5-rE2" firstAttribute="trailing" secondItem="4uq-Db-wvh" secondAttribute="trailing" constant="20" id="Xza-gf-prz"/>
                             <constraint firstItem="ouA-Ta-n1f" firstAttribute="centerX" secondItem="MIC-Wp-wre" secondAttribute="centerX" id="bPr-OZ-l9l"/>
                             <constraint firstItem="ouA-Ta-n1f" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="sQT-y5-rE2" secondAttribute="leading" id="cFN-XE-xRq"/>
@@ -320,6 +334,7 @@
                     <connections>
                         <outlet property="addressLabel" destination="ouA-Ta-n1f" id="KRI-Tb-eW5"/>
                         <outlet property="doneButton" destination="YWb-8n-tgE" id="kLt-gv-cnN"/>
+                        <outlet property="goButton" destination="8sc-Fz-6xj" id="u8E-64-cXo"/>
                         <outlet property="mapPinImage" destination="Kch-EC-PmR" id="yhN-Yd-Aqf"/>
                         <outlet property="mapView" destination="JwB-XW-zYR" id="zQg-xW-KVZ"/>
                     </connections>

@@ -14,6 +14,7 @@
 		3B0C8795254742EF00EFB1DA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B0C8793254742EF00EFB1DA /* LaunchScreen.storyboard */; };
 		3B0C879F2547492E00EFB1DA /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B0C879E2547492E00EFB1DA /* MainViewController.swift */; };
 		3B2198392551EEB7002899A6 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B2198382551EEB7002899A6 /* MapViewController.swift */; };
+		3B2DC24225570CBB00D47E88 /* MapManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B2DC24125570CBB00D47E88 /* MapManager.swift */; };
 		3B442931254B551800A6B0B2 /* StorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B442930254B551800A6B0B2 /* StorageManager.swift */; };
 		3B5496F32549FF9A002F8915 /* NewPlaceTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B5496F22549FF9A002F8915 /* NewPlaceTableViewController.swift */; };
 		3B82508C254E0CB200842B49 /* RaitingControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B82508B254E0CB200842B49 /* RaitingControl.swift */; };
@@ -33,6 +34,7 @@
 		3B0C8796254742EF00EFB1DA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3B0C879E2547492E00EFB1DA /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		3B2198382551EEB7002899A6 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		3B2DC24125570CBB00D47E88 /* MapManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapManager.swift; sourceTree = "<group>"; };
 		3B442930254B551800A6B0B2 /* StorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageManager.swift; sourceTree = "<group>"; };
 		3B5496F22549FF9A002F8915 /* NewPlaceTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPlaceTableViewController.swift; sourceTree = "<group>"; };
 		3B82508B254E0CB200842B49 /* RaitingControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaitingControl.swift; sourceTree = "<group>"; };
@@ -85,6 +87,7 @@
 				3BE7D74325489BD000AE71E4 /* CustomTableViewCell.swift */,
 				3B82508B254E0CB200842B49 /* RaitingControl.swift */,
 				3B2198382551EEB7002899A6 /* MapViewController.swift */,
+				3B2DC24125570CBB00D47E88 /* MapManager.swift */,
 				3B0C8791254742EF00EFB1DA /* Assets.xcassets */,
 				3B0C8793254742EF00EFB1DA /* LaunchScreen.storyboard */,
 				3B0C8796254742EF00EFB1DA /* Info.plist */,
@@ -229,6 +232,7 @@
 				3B442931254B551800A6B0B2 /* StorageManager.swift in Sources */,
 				3B2198392551EEB7002899A6 /* MapViewController.swift in Sources */,
 				3BE7D7472548A6DD00AE71E4 /* PlaceModel.swift in Sources */,
+				3B2DC24225570CBB00D47E88 /* MapManager.swift in Sources */,
 				3BE7D74425489BD000AE71E4 /* CustomTableViewCell.swift in Sources */,
 				3B82508C254E0CB200842B49 /* RaitingControl.swift in Sources */,
 				3B0C878B254742EB00EFB1DA /* SceneDelegate.swift in Sources */,
